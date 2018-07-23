@@ -10,7 +10,7 @@ use CMake to build external 3rd party modules
 
 setup CI for all platforms to ensure 3rd party works
 
-# Suggest
+## Advice
 
 Use modern cmake (target_*), example:
 ```
