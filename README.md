@@ -12,7 +12,7 @@ setup CI for all platforms to ensure 3rd party works
 
 ## Advice
 
-Use modern cmake (target_*), example:
+use modern cmake (target_*), for example:
 ```
 # create library
 add_library(Box2D file.cpp)

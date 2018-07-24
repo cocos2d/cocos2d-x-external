@@ -74,10 +74,10 @@ function android_game12()
 {
     source ../environment.sh
 
-    cd $COCOS2DX_ROOT/game1/android
+    cd $COCOS2DX_ROOT/tests/game1/android
     ./gradlew assembleRelease
 
-    cd $COCOS2DX_ROOT/game2/android
+    cd $COCOS2DX_ROOT/tests/game2/android
     ./gradlew assembleRelease
 }
 
