@@ -26,10 +26,3 @@ add_library(recast STATIC
 )
 
 target_include_directories(recast PUBLIC ..)
-
-set_target_properties(recast
-    PROPERTIES
-    ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
-    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
-    FOLDER "External"
-)

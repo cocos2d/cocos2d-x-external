@@ -18,17 +18,7 @@ set(TREMOLO_SRC
 )
 
 add_library(tremolo STATIC
-  ${TREMOLO_SRC}
+    ${TREMOLO_SRC}
 )
 
 target_include_directories(tremolo PUBLIC ..)
-target_compile_definitions(tremolo PRIVATE ONLY_C)
-
-set_target_properties(tremolo
-    PROPERTIES
-    ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
-    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
-    FOLDER "External"
-    LINKER_LANGUAGE C
-)
-

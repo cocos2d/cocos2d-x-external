@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.6)
 project(pvmp3dec)
 
 set(PVMP3DEC_SRC
-     ./src/pvmp3_normalize.cpp
+    ./src/pvmp3_normalize.cpp
     ./src/pvmp3_alias_reduction.cpp
     ./src/pvmp3_crc.cpp
     ./src/pvmp3_decode_header.cpp
@@ -34,15 +34,8 @@ set(PVMP3DEC_SRC
 )
 
 add_library(pvmp3dec STATIC
-  ${PVMP3DEC_SRC}
+    ${PVMP3DEC_SRC}
 )
 
 target_include_directories(pvmp3dec PUBLIC include)
 target_include_directories(pvmp3dec PRIVATE src)
-
-set_target_properties(pvmp3dec
-    PROPERTIES
-    ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
-    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
-    FOLDER "External"
-)
