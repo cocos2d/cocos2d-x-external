@@ -38,7 +38,8 @@ add_library(pvmp3dec STATIC
 )
 
 target_include_directories(pvmp3dec PUBLIC include)
-target_include_directories(pvmp3dec PUBLIC src)
+target_include_directories(pvmp3dec PRIVATE src)
+
 set_target_properties(pvmp3dec
     PROPERTIES
     ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
