@@ -1,8 +1,12 @@
 # cocos2d-x-external
 
+Travis
+
 ![Build status](https://travis-ci.org/cocos2d/cocos2d-x-external.svg?branch=master)
 
-<!-- ![Build status](https://ci.appveyor.com/api/projects/status/c28chdikeqjxvggi?svg=true) -->
+Appveyor
+
+![Build status](https://ci.appveyor.com/api/projects/status/?svg=true)
 
 ## Plan
 
