@@ -18,7 +18,7 @@ COCOS2D_X = os.path.abspath(os.path.join(DIR_PATH, "../.."))
 # ROOT_DIR/cocos2d-x
 ROOT_DIR = os.path.abspath(os.path.join(COCOS2D_X, ".."))
 
-ANDROID_NDK = os.path.join(ROOT_DIR, "android-ndk-r16b")
+ANDROID_NDK = os.path.join(ROOT_DIR, "android-ndk-r17b")
 ANDROID_SDK = os.path.join(ROOT_DIR, "android-sdk")
 SDK_MANAGER = os.path.join(ROOT_DIR, "sdk_tools/tools/bin/sdkmanager")
 SYSTEM = platform.system().lower()
@@ -60,7 +60,7 @@ def download(url, zip_file):
 
 
 def install_android_ndk():
-    file_name = "android-ndk-r16b-" + SYSTEM + "-x86_64.zip"
+    file_name = "android-ndk-r17b-" + SYSTEM + "-x86_64.zip"
     url = "https://dl.google.com/android/repository/" + file_name
     zip_file = os.path.abspath(os.path.join(ROOT_DIR, file_name))
 
@@ -69,7 +69,7 @@ def install_android_ndk():
 
 
 def install_android_sdk_tools():
-    file_name = "sdk-tools-{system}-3859397.zip".format(
+    file_name = "sdk-tools-{system}-4333796.zip".format(
         system=platform.system().lower())
     url = "https://dl.google.com/android/repository/" + file_name
     zip_file = os.path.abspath(os.path.join(ROOT_DIR, file_name))
@@ -82,8 +82,8 @@ def install_android_sdk():
     switches = " --verbose --sdk_root=" + ANDROID_SDK + " "
     cmd1 = SDK_MANAGER + switches
     packages = [
-        "platforms;android-27",
-        "build-tools;27.0.1",
+        "platforms;android-28",
+        "build-tools;28.0.2",
         "platform-tools",
         "tools"
     ]
