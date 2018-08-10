@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['sample_3a',['sample:',['../interface_chipmunk_abstract_sampler.html#a5c76740a14fd614be3da3148251ca6a5',1,'ChipmunkAbstractSampler']]],
+  ['samplerwithimagefile_3aismask_3a',['samplerWithImageFile:isMask:',['../interface_chipmunk_image_sampler.html#a927f8c0998e5329bde4e8de20980ecd0',1,'ChipmunkImageSampler']]],
+  ['segmentqueryallfrom_3ato_3aradius_3afilter_3a',['segmentQueryAllFrom:to:radius:filter:',['../interface_chipmunk_space.html#af093af367e7fd1ec9a3aaa44409ec6ad',1,'ChipmunkSpace']]],
+  ['segmentqueryfirstfrom_3ato_3aradius_3afilter_3a',['segmentQueryFirstFrom:to:radius:filter:',['../interface_chipmunk_space.html#a2c07aa19af2e0e07c3dbbe3e63099492',1,'ChipmunkSpace']]],
+  ['segmentwithbody_3afrom_3ato_3aradius_3a',['segmentWithBody:from:to:radius:',['../interface_chipmunk_segment_shape.html#a146cfc2dc59de5868012115ab1760ae7',1,'ChipmunkSegmentShape']]],
+  ['setborderrepeat',['setBorderRepeat',['../interface_chipmunk_bitmap_sampler.html#a45b3082d0360875fb26bf27b9533061e',1,'ChipmunkBitmapSampler']]],
+  ['setbordervalue_3a',['setBorderValue:',['../interface_chipmunk_bitmap_sampler.html#a9bbeb6e93edb1352a428fda37e2b5645',1,'ChipmunkBitmapSampler']]],
+  ['setdefaultcollisionhandler_3abegin_3apresolve_3apostsolve_3aseparate_3a',['setDefaultCollisionHandler:begin:preSolve:postSolve:separate:',['../interface_chipmunk_space.html#a30859e07744b8e7dd703267490e5f1a5',1,'ChipmunkSpace']]],
+  ['setprevneighbor_3anextneighbor_3a',['setPrevNeighbor:nextNeighbor:',['../interface_chipmunk_segment_shape.html#ac12cba2c7f714b6fedb105c8945e1613',1,'ChipmunkSegmentShape']]],
+  ['shapefromcpshape_3a',['shapeFromCPShape:',['../interface_chipmunk_shape.html#a0a4b1cb085352958b9b22d6a89acf392',1,'ChipmunkShape']]],
+  ['shapequeryall_3a',['shapeQueryAll:',['../interface_chipmunk_space.html#ad38f1e3da89b9a3eb3e9dc73df977954',1,'ChipmunkSpace']]],
+  ['shapes',['shapes',['../interface_chipmunk_body.html#a0fa6b4d6a6bd6d3208f74334cf21fc36',1,'ChipmunkBody::shapes()'],['../interface_chipmunk_space.html#aba89ce69592a80749d3e019d759f0871',1,'ChipmunkSpace::shapes()']]],
+  ['shapetest_3a',['shapeTest:',['../interface_chipmunk_space.html#a9d1b5e13dc34625e1260f2cc428b9de5',1,'ChipmunkSpace']]],
+  ['simplemotorwithbodya_3abodyb_3arate_3a',['simpleMotorWithBodyA:bodyB:rate:',['../interface_chipmunk_simple_motor.html#a5aaeedc5ca7aa587c00bb63b92974b57',1,'ChipmunkSimpleMotor']]],
+  ['simplify_3a',['simplify:',['../interface_chipmunk_abstract_tile_cache.html#a66fcb209967bd6e8b29d00826e93590b',1,'ChipmunkAbstractTileCache']]],
+  ['simplifycurves_3a',['simplifyCurves:',['../interface_chipmunk_polyline.html#a27fa43c27485148244b32656f7ace0da',1,'ChipmunkPolyline']]],
+  ['simplifyvertexes_3a',['simplifyVertexes:',['../interface_chipmunk_polyline.html#a6335738bb6a25749d0eb2045f0b94000',1,'ChipmunkPolyline']]],
+  ['sleep',['sleep',['../interface_chipmunk_body.html#a6617aa86099eca35874bf412854f820f',1,'ChipmunkBody']]],
+  ['sleepwithgroup_3a',['sleepWithGroup:',['../interface_chipmunk_body.html#ab90684f19dade1d6ff6c20c00371f031',1,'ChipmunkBody']]],
+  ['slidejointwithbodya_3abodyb_3aanchora_3aanchorb_3amin_3amax_3a',['slideJointWithBodyA:bodyB:anchorA:anchorB:min:max:',['../interface_chipmunk_slide_joint.html#a30918afff6142e7cf7fd35555c31f97c',1,'ChipmunkSlideJoint']]],
+  ['smartadd_3a',['smartAdd:',['../interface_chipmunk_space.html#a6922581e458a8c0a7476df1f7bbe7fae',1,'ChipmunkSpace']]],
+  ['smartremove_3a',['smartRemove:',['../interface_chipmunk_space.html#a651f5d3f7f52d15107499385f8bac05d',1,'ChipmunkSpace']]],
+  ['spacefromcpspace_3a',['spaceFromCPSpace:',['../interface_chipmunk_space.html#a355b38ec2cabce5e0643af6005598b8d',1,'ChipmunkSpace']]],
+  ['staticbody',['staticBody',['../interface_chipmunk_body.html#a0dd8482ae016a4a99a811af3bb7e8ba8',1,'ChipmunkBody']]],
+  ['step_3a',['step:',['../interface_chipmunk_space.html#a7ca0baa1f9f99376e474f7e9b3bb1309',1,'ChipmunkSpace']]]
+];
