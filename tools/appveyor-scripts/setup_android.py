@@ -79,7 +79,7 @@ def install_android_sdk_tools():
 
 
 def install_android_sdk():
-    switches = " --verbose --sdk_root=" + ANDROID_SDK + " "
+    switches = " --sdk_root=" + ANDROID_SDK + " "
     cmd1 = SDK_MANAGER + switches
     packages = [
         "platforms;android-28",
