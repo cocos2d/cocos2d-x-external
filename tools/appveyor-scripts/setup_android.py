@@ -69,7 +69,7 @@ def install_android_ndk():
 
 
 def install_android_sdk_tools():
-    file_name = "sdk-tools-{system}-4333796.zip".format(
+    file_name = "sdk-tools-{system}-3859397.zip".format(
         system=platform.system().lower())
     url = "https://dl.google.com/android/repository/" + file_name
     zip_file = os.path.abspath(os.path.join(ROOT_DIR, file_name))
@@ -79,7 +79,7 @@ def install_android_sdk_tools():
 
 
 def install_android_sdk():
-    switches = " --sdk_root=" + ANDROID_SDK + " "
+    switches = " --verbose --sdk_root=" + ANDROID_SDK + " "
     cmd1 = SDK_MANAGER + switches
     packages = [
         "platforms;android-28",
