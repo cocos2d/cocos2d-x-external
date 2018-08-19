@@ -209,4 +209,9 @@ unsigned ZLIB_INTERNAL gz_intmax OF((void));
 #endif
 
 
+#ifdef __APPLE__
+#include "TargetConditionals.h"
+#if TARGET_OS_IPHONE
 #include <unistd.h>
+#endif
+#endif
