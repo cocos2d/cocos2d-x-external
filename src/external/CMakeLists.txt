@@ -3,9 +3,14 @@ project(external)
 
 add_subdirectory(Box2D)
 add_subdirectory(recast)
+add_subdirectory(zlib)
 
 add_library(external empty.cpp)
-target_link_libraries(external Box2D recast)
+target_link_libraries(external
+    Box2D
+    recast
+    zlib
+)
 
 if(ANDROID)
     add_subdirectory(android-specific/pvmp3dec)

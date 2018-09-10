@@ -207,3 +207,11 @@ char ZLIB_INTERNAL *gz_strwinerror OF((DWORD error));
 unsigned ZLIB_INTERNAL gz_intmax OF((void));
 #  define GT_OFF(x) (sizeof(int) == sizeof(z_off64_t) && (x) > gz_intmax())
 #endif
+
+
+#ifdef __APPLE__
+#include "TargetConditionals.h"
+#if TARGET_OS_IPHONE
+#include <unistd.h>
+#endif
+#endif
