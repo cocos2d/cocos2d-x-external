@@ -21,4 +21,8 @@ if [ "$BUILD_TARGET" == "android_game12" ]; then
     exit 0
 fi
 
+if [ "$BUILD_TARGET" == "linux" ]; then
+    eval "CC=gcc-7 && CXX=g++-7"
+fi
+
 echo "before-install.sh execution finished!"

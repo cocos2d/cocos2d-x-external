@@ -26,6 +26,12 @@ matrix:
       sudo: required
       env: BUILD_TARGET=android_lib_arm64_v8a
     - os: linux
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-7
       language: cpp
       sudo: required
       env: BUILD_TARGET=linux
