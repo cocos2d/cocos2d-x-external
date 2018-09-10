@@ -22,8 +22,7 @@ if [ "$BUILD_TARGET" == "android_game12" ]; then
 fi
 
 if [ "$BUILD_TARGET" == "linux" ]; then
-    export CC=gcc-7
-    export CXX=g++-7
+    sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 60 --slave /usr/bin/g++ g++ /usr/bin/g++-7
 fi
 
 echo "before-install.sh execution finished!"
