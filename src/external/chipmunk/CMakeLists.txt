@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.6)
 project(chipmunk LANGUAGES CXX)
 
-file(GLOB chipmunk_source_files "src/*.c")
 file(GLOB chipmunk_public_header "include/chipmunk/*.h")
 
 add_library(chipmunk STATIC
