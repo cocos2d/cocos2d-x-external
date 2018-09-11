@@ -30,7 +30,7 @@ Box2D version: 2.3.2
 chipmunk: 7.0.1
 Recast dtNodeQueue: 1
 zlib version: 1.2.8
-curl version: libcurl/7.54.0 LibreSSL/2.0.20 zlib/1.2.11 nghttp2/1.24.0
+curl version: libcurl/7.52.1
 )";
 }
 } // namespace engine

@@ -13,7 +13,7 @@ target_link_libraries(external
     chipmunk
     recast
     zlib
-    curl
+    libcurl
 )
 
 if(ANDROID)

@@ -194,7 +194,7 @@ if(ENABLE_IPV6 AND NOT WIN32)
   endif()
 endif()
 
-option(ENABLE_MANUAL "to provide the built-in manual" ON)
+option(ENABLE_MANUAL "to provide the built-in manual" OFF)
 unset(USE_MANUAL CACHE) # TODO: cache NROFF/NROFF_MANOPT/USE_MANUAL vars?
 if(ENABLE_MANUAL)
   find_program(NROFF NAMES gnroff nroff)
@@ -289,7 +289,7 @@ endif(NOT NOT_NEED_LIBNSL)
 
 check_function_exists(gethostname HAVE_GETHOSTNAME)
 
-set(OPENSSL_DEFAULT ON)
+set(OPENSSL_DEFAULT OFF)
 if(WIN32)
   set(OPENSSL_DEFAULT OFF)
   check_library_exists_concat("ws2_32" getch        HAVE_LIBWS2_32)
@@ -454,7 +454,7 @@ check_library_exists_concat("idn2" idn2_lookup_ul HAVE_LIBIDN2)
 # Check for symbol dlopen (same as HAVE_LIBDL)
 check_library_exists("${CURL_LIBS}" dlopen "" HAVE_DLOPEN)
 
-option(CURL_ZLIB "Set to ON to enable building curl with zlib support." ON)
+option(CURL_ZLIB "Set to ON to enable building curl with zlib support." OFF)
 set(HAVE_LIBZ OFF)
 set(HAVE_ZLIB_H OFF)
 set(HAVE_ZLIB OFF)
@@ -471,7 +471,7 @@ if(CURL_ZLIB)
 endif()
 
 #libSSH2
-option(CMAKE_USE_LIBSSH2 "Use libSSH2" ON)
+option(CMAKE_USE_LIBSSH2 "Use libSSH2" OFF)
 mark_as_advanced(CMAKE_USE_LIBSSH2)
 set(USE_LIBSSH2 OFF)
 set(HAVE_LIBSSH2 OFF)
