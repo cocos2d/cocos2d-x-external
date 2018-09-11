@@ -1,0 +1,5 @@
+# cmake default build dir
+build/
+
+# vscode default config dir
+.vscode
