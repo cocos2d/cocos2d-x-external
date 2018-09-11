@@ -3,7 +3,7 @@
 
 int main()
 {
-    std::cout << "game2\n";
+    std::cout << "--- game2 test ---" << std::endl;
     std::cout << engine::getInfo();
     return 0;
 }
