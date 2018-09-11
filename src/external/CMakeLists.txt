@@ -5,6 +5,7 @@ add_subdirectory(Box2D)
 add_subdirectory(chipmunk)
 add_subdirectory(recast)
 add_subdirectory(zlib)
+add_subdirectory(curl)
 
 add_library(external empty.cpp)
 target_link_libraries(external
@@ -12,6 +13,7 @@ target_link_libraries(external
     chipmunk
     recast
     zlib
+    libcurl
 )
 
 if(ANDROID)

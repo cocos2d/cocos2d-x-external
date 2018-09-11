@@ -2,6 +2,6 @@
 
 namespace engine
 {
-    std::string getInfo();
+    std::string getInfoActual();
     std::string getInfoExpected();
 }
