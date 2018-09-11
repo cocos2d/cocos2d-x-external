@@ -9,10 +9,10 @@
 #include <sstream>
 
 namespace engine {
-std::string getInfo()
+std::string getInfoActual()
 {
     std::ostringstream o;
-    o << "Actual libs info:\n";
+    o << "External libs info:\n";
     o << "Box2D version: " << b2_version.major << "." << b2_version.minor
       << "." << b2_version.revision << "\n";
     o << "chipmunk: " << cpVersionString << "\n";
@@ -25,7 +25,7 @@ std::string getInfo()
 
 std::string getInfoExpected()
 {
-    return R"(Expected libs info:
+    return R"(External libs info:
 Box2D version: 2.3.2
 chipmunk: 7.0.1
 Recast dtNodeQueue: 1
