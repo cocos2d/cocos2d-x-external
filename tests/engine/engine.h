@@ -2,7 +2,7 @@
 
 namespace engine
 {
-    std::string getInfo();
+    std::string getInfoActual();
     std::string getInfoExpected();
-    std::string getFreeTypeVersion();
+    std::string getFT2Version();
 }
