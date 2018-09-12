@@ -6,6 +6,7 @@ add_subdirectory(chipmunk)
 add_subdirectory(recast)
 add_subdirectory(zlib)
 add_subdirectory(freetype)
+add_subdirectory(jpeg)
 
 add_library(external empty.cpp)
 target_link_libraries(external
@@ -14,6 +15,7 @@ target_link_libraries(external
     recast
     zlib
     freetype
+    jpeg
 )
 
 if(ANDROID)
