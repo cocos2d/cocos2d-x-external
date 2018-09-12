@@ -14,5 +14,4 @@ set(CXX_EXTENSIONS OFF)
 enable_testing()
 
 add_subdirectory(src)
-add_subdirectory(tests/game1)
-add_subdirectory(tests/game2)
+add_subdirectory(tests)
