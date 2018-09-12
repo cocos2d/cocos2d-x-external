@@ -60,7 +60,7 @@ Java_com_example_hellojni_HelloJni_stringFromJNI( JNIEnv* env,
 #else
 #define ABI "unknown"
 #endif
-    std::string str = std::string(ABI) + "\ngame1\n" + engine::getInfo();
+    std::string str = std::string(ABI) + "\ngame1\n" + engine::getInfoActual();
     return (*env).NewStringUTF(str.c_str());
 }
 }
