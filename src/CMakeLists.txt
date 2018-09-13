@@ -9,7 +9,7 @@ add_subdirectory(zlib)
 # add_subdirectory(bullet)
 # add_subdirectory(curl)
 # add_subdirectory(glfw)
-# add_subdirectory(jpeg)
+add_subdirectory(jpeg)
 # add_subdirectory(lua)
 # add_subdirectory(luajit)
 # add_subdirectory(openssl)
@@ -30,7 +30,7 @@ target_link_libraries(external
     # bullet
     # curl
     # glfw
-    # jpeg
+    jpeg
     # lua
     # luajit
     # openssl
@@ -40,7 +40,6 @@ target_link_libraries(external
     uv_a
     # webp
     # websockets
-
 )
 
 if(ANDROID)
