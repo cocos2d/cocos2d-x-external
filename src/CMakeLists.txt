@@ -3,19 +3,44 @@ project(external)
 
 add_subdirectory(Box2D)
 add_subdirectory(chipmunk)
+add_subdirectory(freetype)
 add_subdirectory(recast)
 add_subdirectory(zlib)
-add_subdirectory(freetype)
+# add_subdirectory(bullet)
+# add_subdirectory(curl)
+# add_subdirectory(glfw)
 add_subdirectory(jpeg)
+# add_subdirectory(lua)
+# add_subdirectory(luajit)
+# add_subdirectory(openssl)
+# add_subdirectory(png)
+# add_subdirectory(rapidjson)
+# add_subdirectory(tiff)
+add_subdirectory(uv)
+# add_subdirectory(webp)
+# add_subdirectory(websockets)
+
 
 add_library(external empty.cpp)
 target_link_libraries(external
     Box2D
     chipmunk
+    freetype
     recast
     zlib
-    freetype
+    # bullet
+    # curl
+    # glfw
     jpeg
+    # lua
+    # luajit
+    # openssl
+    # png
+    # rapidjson
+    # tiff
+    uv_a
+    # webp
+    # websockets
 )
 
 if(ANDROID)

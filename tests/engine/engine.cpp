@@ -3,6 +3,7 @@
 #include "chipmunk/chipmunk.h"
 #include "recast/Detour/DetourNode.h"
 #include "zlib.h"
+#include "uv.h"
 
 #include "ft2build.h"
 #include FT_FREETYPE_H
@@ -23,6 +24,7 @@ namespace engine {
         o << "Recast dtNodeQueue: " << q.empty() << "\n";
         o << "zlib version: " << zlibVersion() << "\n";
         o << "freetype version: " << getFT2Version() << "\n";
+        o << "uv: " << uv_version_string() << "\n";
         return o.str();
     }
 
@@ -35,6 +37,7 @@ namespace engine {
         o << "Recast dtNodeQueue: 1" << "\n";
         o << "zlib version: 1.2.8" << "\n";
         o << "freetype version: 2.5.5" << "\n";
+        o << "uv: 1.23.1-dev" << "\n";
         return o.str();
     }
 
@@ -47,7 +50,7 @@ namespace engine {
         assert(FT_Done_FreeType(_FTLibrary) == 0);
 
         std::ostringstream o;
-        o << major << "." << minor << "." << patch << "\n";
+        o << major << "." << minor << "." << patch;
         return o.str();
     }
 
