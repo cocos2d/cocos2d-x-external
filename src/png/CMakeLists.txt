@@ -11,16 +11,24 @@ endif()
 file(GLOB lib_srcs *.c)
 file(GLOB lib_hdrs *.h)
 
-if(CMAKE_ANDROID_ARM_NEON)
-  list(APPEND lib_srcs arm/arm_init.c arm/filter_neon.S arm/filter_neon_intrinsics.c)
-  target_compile_definitions(png PRIVATE -DPNG_ARM_NEON_OPT=2)
-endif()
-
 if(";${CPU_BASELINE_FINAL};" MATCHES "SSE2")
   list(APPEND lib_srcs intel/intel_init.c intel/filter_sse2_intrinsics.c)
-  target_compile_definitions(png PRIVATE -DPNG_INTEL_SSE)
+endif()
+
+if(CMAKE_ANDROID_ARM_NEON)
+  list(APPEND lib_srcs arm/arm_init.c arm/filter_neon.S arm/filter_neon_intrinsics.c)
 endif()
 
 add_library(png STATIC ${lib_srcs} ${lib_hdrs})
+
+if(CMAKE_ANDROID_ARM_NEON)
+  target_compile_definitions(png PRIVATE -DPNG_ARM_NEON_OPT=2)
+endif()
+
+
+if(";${CPU_BASELINE_FINAL};" MATCHES "SSE2")
+  target_compile_definitions(png PRIVATE -DPNG_INTEL_SSE)
+endif()
+
 target_link_libraries(png zlib)
 target_include_directories(zlib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
