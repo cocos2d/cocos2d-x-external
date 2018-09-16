@@ -4,12 +4,16 @@
 #include "recast/Detour/DetourNode.h"
 #include "zlib.h"
 #include "uv.h"
+#include "src/webp/encode.h"
+
 
 #include "ft2build.h"
 #include FT_FREETYPE_H
 
 #include <iostream>
 #include <sstream>
+#include <iomanip>
+
 
 namespace engine {
 
@@ -25,6 +29,8 @@ namespace engine {
         o << "zlib version: " << zlibVersion() << "\n";
         o << "freetype version: " << getFT2Version() << "\n";
         o << "uv: " << uv_version_string() << "\n";
+
+        o << "webp: " << std::setfill('0') << std::setw(6) << std::hex << WebPGetEncoderVersion() << "\n";
         return o.str();
     }
 
@@ -38,6 +44,8 @@ namespace engine {
         o << "zlib version: 1.2.8" << "\n";
         o << "freetype version: 2.5.5" << "\n";
         o << "uv: 1.23.1-dev" << "\n";
+
+        o << "webp: 000500" << "" << "\n";
         return o.str();
     }
 
