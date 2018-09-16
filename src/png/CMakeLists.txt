@@ -33,4 +33,4 @@ if(NOT ${CMAKE_SYSTEM_PROCESSOR} MATCHES "arm")
 endif()
 
 target_link_libraries(png zlib)
-target_include_directories(zlib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(png PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

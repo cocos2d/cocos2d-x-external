@@ -6,8 +6,6 @@ file(GLOB lib_hdrs src/dec/*.h src/demux/*.h src/dsp/*.h src/enc/*.h src/mux/*.h
 add_library(webp STATIC ${lib_srcs} ${lib_hdrs})
 
 if(ANDROID)
-  include(AndroidNdkModules)
-  android_ndk_import_module_cpufeatures()
   target_link_libraries(webp cpufeatures)
 endif()
 

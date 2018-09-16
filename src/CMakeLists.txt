@@ -22,6 +22,14 @@ add_subdirectory(webp)
 
 
 add_library(external empty.cpp)
+
+if(ANDROID)
+    add_subdirectory(android-specific/cpufeatures)
+    add_subdirectory(android-specific/pvmp3dec)
+    add_subdirectory(android-specific/tremolo)
+    target_link_libraries(external pvmp3dec tremolo)
+endif()
+
 target_link_libraries(external
     Box2D
     chipmunk
@@ -43,8 +51,3 @@ target_link_libraries(external
     # websockets
 )
 
-if(ANDROID)
-    add_subdirectory(android-specific/pvmp3dec)
-    add_subdirectory(android-specific/tremolo)
-    target_link_libraries(external pvmp3dec tremolo)
-endif()
