@@ -16,7 +16,6 @@
 
 
 namespace engine {
-
     std::string getInfoActual()
     {
         std::ostringstream o;
@@ -61,5 +60,4 @@ namespace engine {
         o << major << "." << minor << "." << patch;
         return o.str();
     }
-
 } // namespace engine
