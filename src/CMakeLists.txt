@@ -13,7 +13,7 @@ add_subdirectory(jpeg)
 # add_subdirectory(lua)
 # add_subdirectory(luajit)
 # add_subdirectory(openssl)
-# add_subdirectory(png)
+add_subdirectory(png)
 # add_subdirectory(rapidjson)
 # add_subdirectory(tiff)
 add_subdirectory(uv)
@@ -35,7 +35,7 @@ target_link_libraries(external
     # lua
     # luajit
     # openssl
-    # png
+    png
     # rapidjson
     # tiff
     uv_a
