@@ -44,6 +44,7 @@ namespace engine {
         o << "zlib version: 1.2.8" << "\n";
         o << "freetype version: 2.5.5" << "\n";
         o << "uv: 1.23.1-dev" << "\n";
+        o << "webp: 000500" << "" << "\n";
         o << "png: 1.6.34" << "\n";
         return o.str();
     }
