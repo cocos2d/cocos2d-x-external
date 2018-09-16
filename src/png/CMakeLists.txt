@@ -11,7 +11,7 @@ endif()
 file(GLOB lib_srcs *.c)
 file(GLOB lib_hdrs *.h)
 
-if(";${CPU_BASELINE_FINAL};" MATCHES "SSE2")
+if(NOT ${CMAKE_SYSTEM_PROCESSOR} MATCHES "arm")
   list(APPEND lib_srcs intel/intel_init.c intel/filter_sse2_intrinsics.c)
 endif()
 
@@ -28,7 +28,7 @@ else()
 endif()
 
 
-if(";${CPU_BASELINE_FINAL};" MATCHES "SSE2")
+if(NOT ${CMAKE_SYSTEM_PROCESSOR} MATCHES "arm")
   target_compile_definitions(png PRIVATE -DPNG_INTEL_SSE)
 endif()
 
