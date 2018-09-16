@@ -1,6 +1,12 @@
 cmake_minimum_required(VERSION 3.6)
 project(external)
 
+if(ANDROID)
+    add_subdirectory(android-specific/cpufeatures)
+    add_subdirectory(android-specific/pvmp3dec)
+    add_subdirectory(android-specific/tremolo)
+endif()
+
 add_subdirectory(Box2D)
 add_subdirectory(chipmunk)
 add_subdirectory(freetype)
@@ -17,11 +23,11 @@ add_subdirectory(png)
 # add_subdirectory(rapidjson)
 # add_subdirectory(tiff)
 add_subdirectory(uv)
-# add_subdirectory(webp)
+add_subdirectory(webp)
 # add_subdirectory(websockets)
 
-
 add_library(external empty.cpp)
+
 target_link_libraries(external
     Box2D
     chipmunk
@@ -39,12 +45,10 @@ target_link_libraries(external
     # rapidjson
     # tiff
     uv_a
-    # webp
+    webp
     # websockets
 )
 
 if(ANDROID)
-    add_subdirectory(android-specific/pvmp3dec)
-    add_subdirectory(android-specific/tremolo)
     target_link_libraries(external pvmp3dec tremolo)
 endif()
