@@ -21,7 +21,7 @@ add_subdirectory(jpeg)
 # add_subdirectory(openssl)
 add_subdirectory(png)
 # add_subdirectory(rapidjson)
-# add_subdirectory(tiff)
+add_subdirectory(tiff)
 add_subdirectory(uv)
 add_subdirectory(webp)
 # add_subdirectory(websockets)
@@ -43,7 +43,7 @@ target_link_libraries(external
     # openssl
     png
     # rapidjson
-    # tiff
+    tiff
     uv_a
     webp
     # websockets
