@@ -20,8 +20,8 @@ add_subdirectory(jpeg)
 # add_subdirectory(luajit)
 # add_subdirectory(openssl)
 add_subdirectory(png)
-# add_subdirectory(rapidjson)
 add_subdirectory(tiff)
+add_subdirectory(rapidjson/lib)
 add_subdirectory(uv)
 add_subdirectory(webp)
 # add_subdirectory(websockets)
@@ -42,8 +42,8 @@ target_link_libraries(external
     # luajit
     # openssl
     png
-    # rapidjson
     tiff
+    rapidjson
     uv_a
     webp
     # websockets

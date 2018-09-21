@@ -6,7 +6,11 @@
 #include "uv.h"
 #include "src/webp/encode.h"
 #include "png.h"
+<<<<<<< HEAD
 #include "tiffio.h"
+=======
+#include "rapidjson/rapidjson.h"
+>>>>>>> master
 
 #include "ft2build.h"
 #include FT_FREETYPE_H
@@ -32,7 +36,7 @@ namespace engine {
         o << "webp: " << std::setfill('0') << std::setw(6) << std::hex << WebPGetEncoderVersion() << "\n";
         o << "png: " << png_libpng_ver << "\n";
         o << "tiff: " << TIFFGetVersion() << "\n";
-
+        o << "rapidjson: " << RAPIDJSON_VERSION_STRING << "\n";
         return o.str();
     }
 
@@ -50,6 +54,7 @@ namespace engine {
         o << "png: 1.6.34" << "\n";
         o << "tiff: LIBTIFF, Version 4.0.9\nCopyright (c) 1988-1996 Sam Leffler\nCopyright (c) 1991-1996 Silicon Graphics, Inc.\n";
 
+        o << "rapidjson: 1.0.2" << "\n";
         return o.str();
     }
 
