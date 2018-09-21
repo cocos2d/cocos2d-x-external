@@ -6,11 +6,8 @@
 #include "uv.h"
 #include "src/webp/encode.h"
 #include "png.h"
-<<<<<<< HEAD
 #include "tiffio.h"
-=======
 #include "rapidjson/rapidjson.h"
->>>>>>> master
 
 #include "ft2build.h"
 #include FT_FREETYPE_H
