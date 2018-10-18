@@ -227,6 +227,7 @@ if(HAVE_GETENTROPY)
 endif()
 
 if(ANDROID)
+	set(HAVE_GETPAGESIZE 1)
 	add_definitions(-DHAVE_GETPAGESIZE)
 else()
 	check_function_exists(getpagesize HAVE_GETPAGESIZE)
