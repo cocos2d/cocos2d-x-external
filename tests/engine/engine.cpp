@@ -8,6 +8,7 @@
 #include "png.h"
 #include "tiffio.h"
 #include "rapidjson/rapidjson.h"
+#include "openssl/crypto.h"
 
 #include "ft2build.h"
 #include FT_FREETYPE_H
@@ -34,6 +35,7 @@ namespace engine {
         o << "png: " << png_libpng_ver << "\n";
         o << "tiff: " << TIFFGetVersion() << "\n";
         o << "rapidjson: " << RAPIDJSON_VERSION_STRING << "\n";
+        o << "libressl: " << SSLeay_version(SSLEAY_VERSION) << "\n";
         return o.str();
     }
 
@@ -41,17 +43,17 @@ namespace engine {
     {
         std::ostringstream o;
         o << "External libs info:\n";
-        o << "Box2D version: 2.3.2" << "\n";
-        o << "chipmunk: 7.0.1" << "\n";
-        o << "Recast dtNodeQueue: 1" << "\n";
-        o << "zlib version: 1.2.8" << "\n";
-        o << "freetype version: 2.5.5" << "\n";
-        o << "uv: 1.23.1-dev" << "\n";
-        o << "webp: 000500" << "" << "\n";
-        o << "png: 1.6.34" << "\n";
+        o << "Box2D version: 2.3.2\n";
+        o << "chipmunk: 7.0.1\n";
+        o << "Recast dtNodeQueue: 1\n";
+        o << "zlib version: 1.2.8\n";
+        o << "freetype version: 2.5.5\n";
+        o << "uv: 1.23.1-dev\n";
+        o << "webp: 000500\n";
+        o << "png: 1.6.34\n";
         o << "tiff: LIBTIFF, Version 4.0.9\nCopyright (c) 1988-1996 Sam Leffler\nCopyright (c) 1991-1996 Silicon Graphics, Inc.\n";
-
-        o << "rapidjson: 1.0.2" << "\n";
+        o << "rapidjson: 1.0.2\n";
+        o << "libressl: LibreSSL 2.8.1\n" ;
         return o.str();
     }
 

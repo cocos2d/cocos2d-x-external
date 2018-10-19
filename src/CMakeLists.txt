@@ -18,7 +18,8 @@ add_subdirectory(zlib)
 add_subdirectory(jpeg)
 # add_subdirectory(lua)
 # add_subdirectory(luajit)
-# add_subdirectory(openssl)
+# add_subdirectory(openssl) TODO: remove, replaced by libressl
+add_subdirectory(libressl)
 add_subdirectory(png)
 add_subdirectory(tiff)
 add_subdirectory(rapidjson/lib)
@@ -41,6 +42,7 @@ target_link_libraries(external
     # lua
     # luajit
     # openssl
+    crypto ssl tls  # libressl
     png
     tiff
     rapidjson
