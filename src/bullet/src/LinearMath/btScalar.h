@@ -181,14 +181,16 @@ inline int	btGetVersion()
             #endif
         #endif //BT_USE_SSE
     #elif defined( __ARM_NEON__ )
-        #ifdef __clang__
-            #define BT_USE_NEON 1
-			#define BT_USE_SIMD_VECTOR3
-		
-            #if defined BT_USE_NEON && defined (__clang__)
-                #include <arm_neon.h>
-            #endif//BT_USE_NEON
-       #endif //__clang__
+		#if defined(ANDROID) || defined(__ANDROID__)
+			#ifdef __clang__
+				#define BT_USE_NEON 1
+				#define BT_USE_SIMD_VECTOR3
+
+				#if defined BT_USE_NEON && defined (__clang__)
+					#include <arm_neon.h>
+				#endif//BT_USE_NEON
+			#endif //__clang__
+		#endif //defined(ANDROID) || defined(__ANDROID__)
     #endif//__arm__
 
 	#define SIMD_FORCE_INLINE inline __attribute__ ((always_inline))
