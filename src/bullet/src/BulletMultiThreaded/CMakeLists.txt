@@ -85,13 +85,13 @@ SET_TARGET_PROPERTIES(BulletMultiThreaded PROPERTIES SOVERSION ${BULLET_VERSION}
 SUBDIRS(GpuSoftBodySolvers)
 
 
-IF (BUILD_SHARED_LIBS)
-	IF (UNIX)
-		TARGET_LINK_LIBRARIES(BulletMultiThreaded BulletDynamics BulletCollision pthread)
-	ELSE()
+# IF (BUILD_SHARED_LIBS)
+# 	IF (UNIX)
+# 		TARGET_LINK_LIBRARIES(BulletMultiThreaded BulletDynamics BulletCollision pthread)
+# 	ELSE()
 		TARGET_LINK_LIBRARIES(BulletMultiThreaded BulletDynamics BulletCollision)
-	ENDIF()
-ENDIF (BUILD_SHARED_LIBS)
+# 	ENDIF()
+# ENDIF (BUILD_SHARED_LIBS)
 
 
 IF (INSTALL_LIBS)

@@ -12,7 +12,7 @@ add_subdirectory(chipmunk)
 add_subdirectory(freetype)
 add_subdirectory(recast)
 add_subdirectory(zlib)
-# add_subdirectory(bullet)
+add_subdirectory(bullet/src)
 # add_subdirectory(curl)
 # add_subdirectory(glfw)
 add_subdirectory(jpeg)
@@ -35,7 +35,7 @@ target_link_libraries(external
     freetype
     recast
     zlib
-    # bullet
+    BulletSoftBody BulletCollision BulletDynamics LinearMath  # bullet
     # curl
     # glfw
     jpeg
