@@ -59,7 +59,7 @@ add_library(lua
 )
 
 if(UNIX)
-    target_compile_definitions(lua DLUA_USE_LINUX)
+    target_compile_definitions(lua PUBLIC LUA_USE_LINUX)
 endif()
 
 target_include_directories(lua PUBLIC src)
