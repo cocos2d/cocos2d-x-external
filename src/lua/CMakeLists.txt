@@ -56,10 +56,7 @@ add_library(lua
     src/lvm.h
     src/lzio.c
     src/lzio.h
+    src/print.c
 )
-
-if(UNIX)
-    target_compile_definitions(lua PUBLIC LUA_USE_LINUX)
-endif()
 
 target_include_directories(lua PUBLIC src)
