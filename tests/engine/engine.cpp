@@ -10,6 +10,7 @@
 #include "rapidjson/rapidjson.h"
 #include "openssl/crypto.h"
 #include "LinearMath/btScalar.h"
+#include "lua.h"
 
 #include "ft2build.h"
 #include FT_FREETYPE_H
@@ -38,6 +39,7 @@ namespace engine {
         o << "rapidjson: " << RAPIDJSON_VERSION_STRING << "\n";
         o << "libressl: " << SSLeay_version(SSLEAY_VERSION) << "\n";
         o << "bullet: " << btGetVersion() << "\n";
+        o << "lua: " << LUA_VERSION << "\n";
         return o.str();
     }
 
@@ -57,6 +59,7 @@ namespace engine {
         o << "rapidjson: 1.0.2\n";
         o << "libressl: LibreSSL 2.8.1\n" ;
         o << "bullet: 282\n";
+        o << "lua: Lua 5.1\n";
         return o.str();
     }
 
