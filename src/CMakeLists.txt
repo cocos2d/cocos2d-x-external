@@ -16,7 +16,7 @@ add_subdirectory(bullet/src)
 # add_subdirectory(curl)
 # add_subdirectory(glfw)
 add_subdirectory(jpeg)
-# add_subdirectory(lua)
+add_subdirectory(lua)
 # add_subdirectory(luajit)
 # add_subdirectory(openssl) TODO: remove, replaced by libressl
 add_subdirectory(libressl)
@@ -39,7 +39,7 @@ target_link_libraries(external
     # curl
     # glfw
     jpeg
-    # lua
+    lua
     # luajit
     # openssl
     crypto ssl tls  # libressl
