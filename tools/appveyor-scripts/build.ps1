@@ -38,10 +38,12 @@ If ($env:build_type -eq "android_lib") {
     Push-AppveyorArtifact release2.7z
 
 } Else {
+    # needed for ninja
+    & cmd.exe /k "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VsDevCmd.bat" `& powershell
     & mkdir $env:APPVEYOR_BUILD_FOLDER\build
     # if ($lastexitcode -ne 0) {throw}
     Push-Location $env:APPVEYOR_BUILD_FOLDER\build
-    & cmake ..
+    & cmake -G Ninja ..
     if ($lastexitcode -ne 0) {throw}
     & cmake --build .
     if ($lastexitcode -ne 0) {throw}
