@@ -37,12 +37,32 @@ If ($env:build_type -eq "android_lib") {
     if ($lastexitcode -ne 0) {throw}
     Push-AppveyorArtifact release2.7z
 
-} Else {
+} else {
     # setup visual studio command line
     # needed for ninja
-    & "${env:COMSPEC}" /s /c "`"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat`" x86 > NUL && set" | foreach-object {
-        $name, $value = $_ -split '=', 2
-        set-content env:\"$name" $value
+    if ($env:build_type -eq "windows_32") {
+        & "${env:COMSPEC}" /s /c "`"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat`" x86 > NUL && set" | foreach-object {
+            $name, $value = $_ -split '=', 2
+            set-content env:\"$name" $value
+        }
+    }
+    if ($env:build_type -eq "windows_64") {
+        & "${env:COMSPEC}" /s /c "`"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat`" x86_x64 > NUL && set" | foreach-object {
+            $name, $value = $_ -split '=', 2
+            set-content env:\"$name" $value
+        }
+    }
+    if ($env:build_type -eq "windows_arm") {
+        & "${env:COMSPEC}" /s /c "`"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat`" x86_arm > NUL && set" | foreach-object {
+            $name, $value = $_ -split '=', 2
+            set-content env:\"$name" $value
+        }
+    }
+    if ($env:build_type -eq "windows_arm64") {
+        & "${env:COMSPEC}" /s /c "`"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat`" x86_arm64 > NUL && set" | foreach-object {
+            $name, $value = $_ -split '=', 2
+            set-content env:\"$name" $value
+        }
     }
     & mkdir $env:APPVEYOR_BUILD_FOLDER\build
     # if ($lastexitcode -ne 0) {throw}
