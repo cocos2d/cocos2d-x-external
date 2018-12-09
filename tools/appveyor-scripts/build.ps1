@@ -38,8 +38,12 @@ If ($env:build_type -eq "android_lib") {
     Push-AppveyorArtifact release2.7z
 
 } Else {
+    # setup visual studio command line
     # needed for ninja
-    & cmd.exe /k "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VsDevCmd.bat" `& powershell
+    & "${env:COMSPEC}" /s /c "`"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VsDevCmd.bat`" -no_logo && set" | foreach-object {
+        $name, $value = $_ -split '=', 2
+        set-content env:\"$name" $value
+    }
     & mkdir $env:APPVEYOR_BUILD_FOLDER\build
     # if ($lastexitcode -ne 0) {throw}
     Push-Location $env:APPVEYOR_BUILD_FOLDER\build
