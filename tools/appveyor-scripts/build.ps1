@@ -40,7 +40,7 @@ If ($env:build_type -eq "android_lib") {
 } Else {
     # setup visual studio command line
     # needed for ninja
-    & "${env:COMSPEC}" /s /c "`"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat`" x86 && set" | foreach-object {
+    & "${env:COMSPEC}" /s /c "`"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat`" x86 > NUL && set" | foreach-object {
         $name, $value = $_ -split '=', 2
         set-content env:\"$name" $value
     }
