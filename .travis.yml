@@ -15,26 +15,26 @@ matrix:
       osx_image: xcode9.3
       sudo: required
       env: BUILD_TARGET=ios_build
-    - os: linux
-      language: cpp
-      sudo: required
-      env: BUILD_TARGET=android_lib_x86_64
+    # - os: linux
+    #   language: cpp
+    #   sudo: required
+    #   env: BUILD_TARGET=android_lib_x86_64
     - os: linux
       language: cpp
       sudo: required
       env: BUILD_TARGET=android_game12
-    - os: linux
-      language: cpp
-      sudo: required
-      env: BUILD_TARGET=android_lib_armeabi_v7a
-    - os: linux
-      language: cpp
-      sudo: required
-      env: BUILD_TARGET=android_lib_x86
-    - os: linux
-      language: cpp
-      sudo: required
-      env: BUILD_TARGET=android_lib_arm64_v8a
+    # - os: linux
+    #   language: cpp
+    #   sudo: required
+    #   env: BUILD_TARGET=android_lib_armeabi_v7a
+    # - os: linux
+    #   language: cpp
+    #   sudo: required
+    #   env: BUILD_TARGET=android_lib_x86
+    # - os: linux
+    #   language: cpp
+    #   sudo: required
+    #   env: BUILD_TARGET=android_lib_arm64_v8a
     - os: osx
       language: cpp
       osx_image: xcode9.3

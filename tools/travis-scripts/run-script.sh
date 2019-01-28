@@ -77,8 +77,8 @@ function android_game12()
     cd $COCOS2DX_ROOT/tests/game1/android
     ./gradlew assembleRelease
 
-    cd $COCOS2DX_ROOT/tests/game2/android
-    ./gradlew assembleRelease
+    # cd $COCOS2DX_ROOT/tests/game2/android
+    # ./gradlew assembleRelease
 }
 
 function build_ios()
