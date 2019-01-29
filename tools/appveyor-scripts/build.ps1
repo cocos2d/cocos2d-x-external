@@ -1,8 +1,8 @@
 Set-PSDebug -Trace 1
 
-$env:ANDROID_NDK_HOME=$env:APPVEYOR_BUILD_FOLDER + "\..\android-ndk-r18"
-$env:NDK_ROOT=$env:APPVEYOR_BUILD_FOLDER + "\..\android-ndk-r18"
-$env:ANDROID_NDK_ROOT=$env:APPVEYOR_BUILD_FOLDER + "\..\android-ndk-r18"
+$env:ANDROID_NDK_HOME=$env:APPVEYOR_BUILD_FOLDER + "\..\android-ndk-r19"
+$env:NDK_ROOT=$env:APPVEYOR_BUILD_FOLDER + "\..\android-ndk-r19"
+$env:ANDROID_NDK_ROOT=$env:APPVEYOR_BUILD_FOLDER + "\..\android-ndk-r19"
 
 $env:ANDROID_SDK_ROOT=$env:APPVEYOR_BUILD_FOLDER + "\..\android-sdk"
 $env:ANDROID_HOME=$env:APPVEYOR_BUILD_FOLDER + "\..\android-sdk"
@@ -29,13 +29,13 @@ If ($env:build_type -eq "android_lib") {
     if ($lastexitcode -ne 0) {throw}
     Push-AppveyorArtifact release1.7z
 
-    Push-Location $env:APPVEYOR_BUILD_FOLDER\tests\game2\android
-    & ./gradlew assembleDebug
-    if ($lastexitcode -ne 0) {throw}
+    # Push-Location $env:APPVEYOR_BUILD_FOLDER\tests\game2\android
+    # & ./gradlew assembleDebug
+    # if ($lastexitcode -ne 0) {throw}
 
-    & 7z a release2.7z $env:APPVEYOR_BUILD_FOLDER\tests\game2\android\app\build\outputs\
-    if ($lastexitcode -ne 0) {throw}
-    Push-AppveyorArtifact release2.7z
+    # & 7z a release2.7z $env:APPVEYOR_BUILD_FOLDER\tests\game2\android\app\build\outputs\
+    # if ($lastexitcode -ne 0) {throw}
+    # Push-AppveyorArtifact release2.7z
 
 } else {
     # setup visual studio command line
