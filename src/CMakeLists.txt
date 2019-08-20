@@ -21,7 +21,6 @@ add_subdirectory(lua)
 # add_subdirectory(openssl) TODO: remove, replaced by libressl
 add_subdirectory(libressl)
 add_subdirectory(png)
-add_subdirectory(tiff)
 add_subdirectory(rapidjson/lib)
 add_subdirectory(uv)
 add_subdirectory(webp)
@@ -44,7 +43,6 @@ target_link_libraries(external
     # openssl
     crypto ssl tls  # libressl
     png
-    tiff
     rapidjson
     uv_a
     webp
