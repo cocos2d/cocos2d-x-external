@@ -41,6 +41,9 @@ matrix:
       sudo: required
       env: BUILD_TARGET=osx
 
+jdk:
+  - oraclejdk8
+
 script:
 - tools/travis-scripts/run-script.sh
 before_install:
