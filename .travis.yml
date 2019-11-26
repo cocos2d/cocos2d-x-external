@@ -20,7 +20,8 @@ matrix:
     #   sudo: required
     #   env: BUILD_TARGET=android_lib_x86_64
     - os: linux
-      language: cpp
+      language: android
+      dist: xenial
       sudo: required
       env: BUILD_TARGET=android_game12
     # - os: linux
